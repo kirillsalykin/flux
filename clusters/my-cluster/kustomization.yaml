@@ -8,4 +8,3 @@ images:
   - name: ghcr.io/kirillsalykin/dummy-backend
     newName: ghcr.io/kirillsalykin/dummy-backend
     newTag: "latest"
-
