@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - linkerd
   - backend
+  - linkerd-helmrepository.yaml
