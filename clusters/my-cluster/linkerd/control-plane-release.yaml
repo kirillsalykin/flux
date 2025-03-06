@@ -13,3 +13,12 @@ spec:
         kind: HelmRepository
         name: linkerd
         namespace: flux-system
+  valuesFrom:
+    - kind: Secret
+      name: linkerd-trust-anchor
+      valuesKey: tls.crt
+      targetPath: identityTrustAnchorsPEM
+  values:
+    identity:
+      issuer:
+        scheme: "kubernetes.io/tls"
