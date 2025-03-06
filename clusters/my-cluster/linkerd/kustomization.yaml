@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - ns.yaml
   - crds.yaml
+  - certs.yaml
   - control-plane-release.yaml
