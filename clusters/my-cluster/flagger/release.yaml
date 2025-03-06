@@ -1,5 +1,5 @@
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: flagger
@@ -10,17 +10,15 @@ spec:
     crds: CreateReplace
   upgrade:
     crds: CreateReplace
-  chart:
-    spec:
-      chartRef:
-        kind: OCIRepository
-        name: flagger
-        namespace: flux-system
+  chartRef:
+    kind: OCIRepository
+    name: flagger
+    namespace: flux-system
   interval: 5m0s
-values:
-  meshProvider: linkerd
-  linkerdAuthPolicy:
-    create: true
-  metricsServer: http://prometheus.linkerd-viz:9090
-  serviceMonitor:
-    enabled: true
+  values:
+    meshProvider: linkerd
+    linkerdAuthPolicy:
+      create: true
+    metricsServer: http://prometheus.linkerd-viz:9090
+    serviceMonitor:
+      enabled: true
