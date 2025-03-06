@@ -20,5 +20,3 @@ spec:
     linkerdAuthPolicy:
       create: true
     metricsServer: http://prometheus.linkerd-viz:9090
-    serviceMonitor:
-      enabled: true
