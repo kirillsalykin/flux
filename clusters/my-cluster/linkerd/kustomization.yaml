@@ -5,3 +5,10 @@ resources:
   - crds.yaml
   - certs.yaml
   - control-plane-release.yaml
+secretGenerator:
+  - name: linkerd-trust-anchor
+    namespace: linkerd
+    type: kubernetes.io/tls
+    files:
+      - tls.crt=ca.crt
+      - tls.key=ca.key
