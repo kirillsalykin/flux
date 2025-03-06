@@ -7,3 +7,17 @@ metadata:
 spec:
   image: ghcr.io/kirillsalykin/dummy-backend
   interval: 1m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: backend
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: backend
+  filterTags:
+    pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$'
+  policy:
+    numerical:
+      order: asc
