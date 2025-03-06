@@ -4,3 +4,4 @@ resources:
   - linkerd
   - flagger
   - backend
+  - image-repo.yaml
