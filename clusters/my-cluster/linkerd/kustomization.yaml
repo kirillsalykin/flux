@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - crds.yaml
   - core.yaml
+  - viz.yaml
