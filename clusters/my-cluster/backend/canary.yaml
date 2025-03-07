@@ -15,13 +15,14 @@ spec:
     targetPort: 8800
     name: backend
     portDiscovery: true
+
+  skipAnalysis: false
   analysis:
     # schedule interval (default 60s)
     interval: 15s
     threshold: 2
     stepWeights: [1, 5, 20, 80]
     stepWeightPromotion: 100
-    skipAnalysis: false
 
     metrics:
       - name: request-success-rate
