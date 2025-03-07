@@ -20,7 +20,7 @@ export let options = {
 };
 
 export default function() {
-  const url = 'http://backend.backend.svc.cluster.local/hello';
+  const url = 'http://backend.backend.svc.cluster.local:8800/hello';
   const result = http.get(url);
   check(result, {
     'http response status code is 200': result.status === 200,

@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: k6
+resources:
+  - k6-testrun.yaml
+generatorOptions:
+  disableNameSuffixHash: true
+configMapGenerator:
+  - name: scripts
+    files:
+      - test.js

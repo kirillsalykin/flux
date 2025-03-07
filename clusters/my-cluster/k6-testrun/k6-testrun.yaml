@@ -1,7 +1,7 @@
-apiVersion: k6.io/v1beta1
-kind: K6
+apiVersion: k6.io/v1alpha1
+kind: TestRun
 metadata:
-  name: k6-sample
+  name: k6-testrun
   namespace: k6
 spec:
   parallelism: 1
