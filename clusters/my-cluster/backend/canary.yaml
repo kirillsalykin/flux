@@ -20,10 +20,12 @@ spec:
     interval: 15s
     # max number of failed checks before rollback
     threshold: 2
+
+    stepWeight: 10
+
     # number of checks to run before promotion
     iterations: 5
-    # Prometheus checks based on
-    # http_request_duration_seconds histogram
+
     metrics:
       - name: request-success-rate
         interval: 5s
