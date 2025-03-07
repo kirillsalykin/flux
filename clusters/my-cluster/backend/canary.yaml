@@ -4,7 +4,6 @@ metadata:
   name: backend
   namespace: default
 spec:
-  provider: kubernetes
   targetRef:
     apiVersion: apps/v1
     kind: Deployment
