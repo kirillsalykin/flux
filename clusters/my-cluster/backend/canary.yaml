@@ -11,7 +11,6 @@ spec:
     name: backend
   progressDeadlineSeconds: 60
   service:
-    type: NodePort
     port: 8800
     targetPort: 8800
     name: backend
