@@ -7,4 +7,4 @@ resources:
 images:
   - name: ghcr.io/kirillsalykin/dummy-backend
     newName: ghcr.io/kirillsalykin/dummy-backend
-    newTag: "1741278189" # {"$imagepolicy": "flux-system:backend:tag"}
+    newTag: "1741341544" # {"$imagepolicy": "flux-system:backend:tag"}
