@@ -18,18 +18,17 @@ spec:
 
   skipAnalysis: false
   analysis:
-    # schedule interval (default 60s)
-    interval: 15s
+    interval: 20s
     threshold: 1
     stepWeights: [1, 5, 20, 80]
     stepWeightPromotion: 100
 
     metrics:
       - name: request-success-rate
-        interval: 15s
+        interval: 20s
         thresholdRange:
           min: 99
       - name: request-duration
-        interval: 15s
+        interval: 20s
         thresholdRange:
           max: 100
