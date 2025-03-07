@@ -26,10 +26,10 @@ spec:
 
     metrics:
       - name: request-success-rate
-        interval: 5s
+        interval: 15s
         thresholdRange:
           min: 99
       - name: request-duration
-        interval: 5s
+        interval: 15s
         thresholdRange:
           max: 100
