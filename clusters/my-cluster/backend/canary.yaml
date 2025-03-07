@@ -18,13 +18,10 @@ spec:
   analysis:
     # schedule interval (default 60s)
     interval: 15s
-    # max number of failed checks before rollback
     threshold: 2
-
-    stepWeight: 10
-
-    # number of checks to run before promotion
-    iterations: 5
+    stepWeights: [1, 5, 20, 80]
+    stepWeightPromotion: 100
+    skipAnalysis: false
 
     metrics:
       - name: request-success-rate
