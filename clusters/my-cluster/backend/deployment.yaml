@@ -5,6 +5,8 @@ metadata:
   name: backend
   labels:
     app: backend
+  annotations:
+    linkerd.io/inject: enabled
 spec:
   replicas: 2
   selector:
