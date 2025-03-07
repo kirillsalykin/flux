@@ -26,10 +26,10 @@ spec:
     # http_request_duration_seconds histogram
     metrics:
       - name: request-success-rate
-        interval: 1m
+        interval: 5s
         thresholdRange:
           min: 99
       - name: request-duration
-        interval: 30s
+        interval: 5s
         thresholdRange:
-          max: 500
+          max: 100
