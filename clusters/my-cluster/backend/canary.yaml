@@ -20,7 +20,7 @@ spec:
   analysis:
     # schedule interval (default 60s)
     interval: 15s
-    threshold: 2
+    threshold: 1
     stepWeights: [1, 5, 20, 80]
     stepWeightPromotion: 100
 
