@@ -1,0 +1,36 @@
+apiVersion: flagger.app/v1beta1
+kind: Canary
+metadata:
+  name: backend
+  namespace: default
+spec:
+  provider: kubernetes
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: backend
+  progressDeadlineSeconds: 60
+  service:
+    type: NodePort
+    port: 8800
+    targetPort: 8800
+    name: backend
+    portDiscovery: true
+  analysis:
+    # schedule interval (default 60s)
+    interval: 15s
+    # max number of failed checks before rollback
+    threshold: 2
+    # number of checks to run before promotion
+    iterations: 5
+    # Prometheus checks based on
+    # http_request_duration_seconds histogram
+    metrics:
+      - name: request-success-rate
+        interval: 1m
+        thresholdRange:
+          min: 99
+      - name: request-duration
+        interval: 30s
+        thresholdRange:
+          max: 500
