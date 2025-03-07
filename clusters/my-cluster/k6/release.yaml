@@ -12,3 +12,5 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: flux-system
+  values:
+     installCRDs: true

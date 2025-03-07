@@ -1,7 +1,8 @@
-apiVersion: k6.io/v1alpha1
+apiVersion: k6.io/v1beta1
 kind: K6
 metadata:
   name: k6-sample
+  namespace: k6
 spec:
   parallelism: 1
   script:
