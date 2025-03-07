@@ -8,7 +8,6 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: backend
-  progressDeadlineSeconds: 60
   service:
     port: 8800
     targetPort: 8800
