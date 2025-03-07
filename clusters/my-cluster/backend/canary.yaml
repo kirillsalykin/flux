@@ -9,17 +9,16 @@ spec:
     name: backend
   service:
     port: 8800
-    targetPort: 8800
-    name: backend
-    portDiscovery: true
-
   skipAnalysis: false
   analysis:
-    interval: 20s
-    threshold: 1
-    stepWeights: [1, 5, 20, 80]
-    stepWeightPromotion: 100
-
+    interval: 1m
+    threshold: 10
+    maxWeight: 50
+    stepWeight: 5
+    # interval: 60s
+    # threshold: 2
+    # stepWeights: [1, 5, 20, 80]
+    # stepWeightPromotion: 100
     metrics:
       - name: request-success-rate
         interval: 20s
